@@ -1,0 +1,106 @@
+after-login-command = []
+after-startup-command = []
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 30
+default-root-container-layout = "tiles"
+default-root-container-orientation = "auto"
+
+on-focused-monitor-changed = ["move-mouse monitor-lazy-center"]
+
+automatically-unhide-macos-hidden-apps = false
+
+[key-mapping]
+preset = "qwerty"
+
+[gaps.inner]
+horizontal = 12
+vertical = 12
+
+[gaps.outer]
+left = 6
+bottom = 6
+top = 6
+right = 6
+
+[mode.main.binding]
+cmd-ctrl-k = "mode kommand"
+
+alt-h = ["focus left"]
+alt-j = ["focus down"]
+alt-k = ["focus up"]
+alt-l = ["focus right"]
+
+cmd-h = []
+cmd-alt-h = []
+
+[mode.kommand.binding]
+esc     = "mode main"
+s       = "mode service"
+m       = "mode move"
+shift-m = "mode merge"
+t       = "mode toggle"
+
+h = ["focus left", "mode main"]
+j = ["focus down", "mode main"]
+k = ["focus up", "mode main"]
+l = ["focus right", "mode main"]
+
+shift-h = ["move left", "mode main"]
+shift-j = ["move down", "mode main"]
+shift-k = ["move up", "mode main"]
+shift-l = ["move right", "mode main"]
+
+shift-minus = ["resize smart -50"]
+shift-equal = ["resize smart +50"]
+
+"1" = ["workspace 1", "mode main"]
+"2" = ["workspace 2", "mode main"]
+"3" = ["workspace 3", "mode main"]
+"4" = ["workspace 4", "mode main"]
+
+shift-1 = ["move-node-to-workspace 1", "mode main"]
+shift-2 = ["move-node-to-workspace 2", "mode main"]
+shift-3 = ["move-node-to-workspace 3", "mode main"]
+shift-4 = ["move-node-to-workspace 4", "mode main"]
+
+slash = ["layout tiles horizontal vertical", "mode main"]
+comma = ["layout accordion horizontal vertical", "mode main"]
+
+c = ["exec-and-forget open -a 'kitty'", "mode main"]
+b = ["exec-and-forget open -a 'Zen Browser'", "mode main"]
+
+[mode.service.binding]
+esc = ["reload-config", "mode main"]
+r   = ["flatten-workspace-tree", "mode main"]
+w   = ["close-all-windows-but-current", "mode main"]
+
+[mode.move.binding]
+esc = "mode main"
+h   = ["move left", "mode main"]
+j   = ["move down", "mode main"]
+k   = ["move up", "mode main"]
+l   = ["move right", "mode main"]
+
+"1" = ["move-node-to-workspace 1", "mode main"]
+"2" = ["move-node-to-workspace 2", "mode main"]
+"3" = ["move-node-to-workspace 3", "mode main"]
+"4" = ["move-node-to-workspace 4", "mode main"]
+
+[mode.merge.binding]
+esc = "mode main"
+h   = ["join-with left", "mode main"]
+j   = ["join-with down", "mode main"]
+k   = ["join-with up", "mode main"]
+l   = ["join-with right", "mode main"]
+
+[mode.toggle.binding]
+esc = "mode main"
+f   = ["layout floating tiling", "mode main"]
+
+[[on-window-detected]]
+if.app-id = "app.zen-browser.zen"
+if.window-title-regex-substring = "^Picture-in-Picture$"
+run = ["layout floating"]
