@@ -19,6 +19,7 @@ if status is-interactive
     alias g=git
     alias p=pnpm
     alias nv=nvim
+    alias lg=lazygit
 
     # aliases:dotfiles
     alias config='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
@@ -58,3 +59,7 @@ if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
