@@ -30,10 +30,10 @@ right = 6
 [mode.main.binding]
 cmd-ctrl-k = "mode kommand"
 
-alt-h = ["focus left"]
-alt-j = ["focus down"]
-alt-k = ["focus up"]
-alt-l = ["focus right"]
+# alt-h = ["focus left"]
+# alt-j = ["focus down"]
+# alt-k = ["focus up"]
+# alt-l = ["focus right"]
 
 cmd-h = []
 cmd-alt-h = []
