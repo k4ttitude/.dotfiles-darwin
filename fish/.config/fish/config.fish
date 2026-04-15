@@ -21,6 +21,7 @@ if status is-interactive
     alias p=pnpm
     alias nv=nvim
     alias lg=lazygit
+    alias lzd=lazydocker
 
     # aliases:dotfiles
     alias config='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
@@ -64,3 +65,10 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# gpg
+set -x GPG_TTY (tty)
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :
