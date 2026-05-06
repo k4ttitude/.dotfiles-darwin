@@ -30,18 +30,19 @@ right = 6
 [mode.main.binding]
 cmd-ctrl-k = "mode kommand"
 
-# alt-h = ["focus left"]
-# alt-j = ["focus down"]
-# alt-k = ["focus up"]
-# alt-l = ["focus right"]
-
-cmd-h = []
-cmd-alt-h = []
 # Hyper key workspace switching
 cmd-ctrl-alt-shift-1 = "workspace 1"
 cmd-ctrl-alt-shift-2 = "workspace 2"
 cmd-ctrl-alt-shift-3 = "workspace 3"
 cmd-ctrl-alt-shift-4 = "workspace 4"
+cmd-ctrl-alt-shift-h = "focus left"
+cmd-ctrl-alt-shift-j = "focus down"
+cmd-ctrl-alt-shift-k = "focus up"
+cmd-ctrl-alt-shift-l = "focus right"
+
+# Disable MacOS defaults
+cmd-h = []
+cmd-alt-h = []
 
 [mode.kommand.binding]
 esc     = "mode main"
