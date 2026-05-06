@@ -37,6 +37,11 @@ cmd-ctrl-k = "mode kommand"
 
 cmd-h = []
 cmd-alt-h = []
+# Hyper key workspace switching
+cmd-ctrl-alt-shift-1 = "workspace 1"
+cmd-ctrl-alt-shift-2 = "workspace 2"
+cmd-ctrl-alt-shift-3 = "workspace 3"
+cmd-ctrl-alt-shift-4 = "workspace 4"
 
 [mode.kommand.binding]
 esc     = "mode main"
