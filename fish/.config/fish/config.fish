@@ -9,6 +9,7 @@ if status is-interactive
     fish_add_path /opt/homebrew/opt/libpq/bin
     fish_add_path $HOME/.local/bin
     fish_add_path $HOME/.cargo/bin
+    fish_add_path $HOME/.rustup/toolchains/stable-aarch64-apple-darwin/bin
 
     # pyenv
     # pyenv init - | source
