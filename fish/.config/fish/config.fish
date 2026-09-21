@@ -1,3 +1,8 @@
+# ---- xdg ----
+# lazygit (and other jesseduffield tools) default to
+# ~/Library/Application Support on darwin without this.
+set -gx XDG_CONFIG_HOME $HOME/.config
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     set -gx PAGER less
@@ -57,7 +62,7 @@ if status is-interactive
 end
 
 # pnpm
-set -gx PNPM_HOME "/home/katt/.local/share/pnpm"
+set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
