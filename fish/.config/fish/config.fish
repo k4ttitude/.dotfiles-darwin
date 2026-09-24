@@ -28,6 +28,7 @@ if status is-interactive
     alias nv=nvim
     alias lg=lazygit
     alias lzd=lazydocker
+    alias yz = yazi
 
     # aliases:dotfiles
     alias config='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'

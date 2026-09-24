@@ -2,9 +2,8 @@ gui:
   # Default is 0.3333, which leaves the diff only ~2/3 of the terminal.
   # A narrower side panel gives side-by-side diffs room to breathe.
   sidePanelWidth: 0.2
-
 git:
-  pagers:
+  diffRenderers:
     - colorArg: always
       # Side-by-side diffs via delta, stripped of chrome.
       #
@@ -14,9 +13,9 @@ git:
       # (panelWidth / 2) - 6 and exists for ydiff, whose --width is per-column.
       # delta's --width is the TOTAL width, so it would squeeze both columns
       # into half the panel.
-      pager: >-
-        delta --dark --paging=never --side-by-side
-        --file-decoration-style=none
-        --hunk-header-style=omit
-        --line-numbers-left-format="{nm:>3} "
-        --line-numbers-right-format="{np:>3} "
+      #
+      # Hunk header shows only the enclosing function (the text git puts
+      # after @@), with no box, file name or line number. Git picks that
+      # line with the diff drivers in ~/.config/git/attributes.
+      command: >-
+        delta --dark --paging=never --side-by-side --file-decoration-style=none --hunk-header-style=syntax --hunk-header-decoration-style=none --line-numbers-left-format="{nm:>3} " --line-numbers-right-format="{np:>3} "
